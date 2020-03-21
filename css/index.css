@@ -1,0 +1,13 @@
+#download {
+    background-image: url("../img/Diamond-Sunset.svg");
+    background-size: cover;
+}
+body {
+    position: relative;
+}
+.navbar-brand{
+  font-weight: 600;
+}
+.footer {
+    background-color: #f5f5f5;
+}
