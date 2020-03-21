@@ -4,9 +4,10 @@
 }
 body {
     position: relative;
+    font-family: 'Ubuntu', sans-serif;
 }
 .navbar-brand{
-  font-weight: 600;
+  font-weight: 700;
 }
 .footer {
     background-color: #f5f5f5;
