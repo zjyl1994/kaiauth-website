@@ -45,6 +45,7 @@
         <p>
             <a class="btn btn-outline-light btn-lg" href="download/kaiauth-omnisd-latest.zip" role="button">Omni SD</a>
             <a class="btn btn-outline-light btn-lg" href="download/kaiauth-webide-latest.zip" role="button">Web IDE</a>
+            <a class="btn btn-outline-light btn-lg" href="https://github.com/zjyl1994/KaiAuth" role="button">Source</a>
         </p>
     </div>
     <div class="container">
@@ -73,27 +74,25 @@
             <h2 class="text-center">Manual</h2>
             <hr class="my-4">
             <div>
-                <h3 class="text-center">Basic functions</h3>
-
+                <div class="media">
+                    <img class="mr-3" src="img/app_in_launcher.png" alt="App in Launcher" />
+                    <div class="media-body">
+                        <h5 class="mt-0">KaiAuth</h5>
+                        <p>An easy-to-use TOTP 2-step verification code generation tool, like Google Authenticator!</p>
+                        <p>Available in 🇺🇸 American English,🇨🇳 Simplified Chinese, 🇹🇼 Traditional Chinese and 🇭🇰
+                            Cantonese.</p>
+                        <p>The application display language depends on the language setting of the phone.</p>
+                    </div>
+                </div>
+                <br>
                 <div class="media">
                     <img class="mr-3" src="img/main_interface.png" alt="Main interface" />
                     <div class="media-body">
                         <h5 class="mt-0">Main interface</h5>
-                        <p>Although these screenshots are in Chinese, don&rsquo;t worry, English versions are now
-                            available.</p>
-
                         <p>You can see a lot of TOTP codes on the screen, you can use the navigation keys to scroll them
-                            up,
-                            down, left and right.</p>
-
+                            up,down, left and right.</p>
                         <p>There are two soft keys at the bottom, the left one means to add a new code, and the right
-                            one means
-                            to delete the currently selected code.</p>
-
-                        <p>Before deleting, you will be asked if you want to delete, so you do n’t need to worry about
-                            deleting
-                            an account profile mistakenly.</p>
-
+                            one meansto open option menu in currently selected code.</p>
                         <p>Press the soft key named Add on the left,the application will switch to the scan QR code
                             page.</p>
                     </div>
@@ -103,58 +102,59 @@
                     <img class="mr-3" src="img/scan_qrcode.png" alt="QR code scan" />
                     <div class="media-body">
                         <h5 class="mt-0">Scan QR code interface</h5>
-
                         <p>To use the QR-code scanning feature, the application requires permission for using the
                             camera. A
                             dialog will popup to ask you whether you are going to grant it or not.</p>
-
                         <p>Place the QR-code into the camera&rsquo;s sight. If any valid QR-codes are identified, the
                             application will automatically extract information contained in the QR-code then generate a
                             new
                             profile from the information. The new profile will then be shown in the main interface of
                             the app.
                         </p>
-
                     </div>
                 </div>
-                <h3 class="text-center">Advanced Features</h3>
-
-                <p>Based on what I actually need, I have made some advanced features. They can be activated by pressing
-                    keys in some special sequences.
-                    Please enter these codes by sequence when you are opening KaiAuth. Entering these codes in the phone
-                    dialer has no effects at all.</p>
-
-                <h4>*#7370#</h4>
-
-                <p>Designed for very old Nokia phones. Will clean the data stored in the app. Very useful when you have
-                    messed up your code list and had to re-import the correct data.</p>
-
-                <h4>*#0000#</h4>
-
-                <p>Also useful when you are using an old Nokia. The version of the KaiAuth app will be shown after
-                    typing the sequence above.</p>
-
-                <h4>*#467678#</h4>
-
-                <p>Will automatically import profiles from a file <code>kaiauth.json</code> located in the SD card.
-                    Useful when you are transferring an existing profile list from another device, or restore profiles
-                    from a backup you previously made.</p>
-
-                <h4>*#397678#</h4>
-
-                <p>Will export current profiles stored in the application into a file named <code>kaiauth.json</code> in
-                    the SD card. Used for backing up or transferring profiles to a new device.</p>
-
-                <p><strong>WARNING:</strong> The file contains sensitive information, please keep it in a safe place.
-                    Anyone who gets the file can get access to your account by using profiles stored in the file!</p>
-
+                <br>
+                <div class="media">
+                    <img class="mr-3" src="img/option_menu.png" alt="QR code scan" />
+                    <div class="media-body">
+                        <h5 class="mt-0">Option Menu</h5>
+                        <p><strong>Delete:</strong> Before deleting, you will be asked if you want to delete, so you do
+                            n’t need to worry about
+                            deleting an account profile mistakenly.</p>
+                        <p><strong>Edit name:</strong> Modify the display name of the profile.</p>
+                        <p><strong>Show secert:</strong> View the secret key of the profile, you should not reveal it to
+                            anyone.</p>
+                        <p><strong>Import from SD Card:</strong> Will automatically import profiles from a file
+                            <code>kaiauth.json</code> located in the SD card.
+                            Useful when you are transferring an existing profile list from another device, or restore
+                            profiles
+                            from a backup you previously made.</p>
+                        <p><strong>Export to SD Card:</strong> Will export current profiles stored in the application
+                            into a file named <code>kaiauth.json</code> in
+                            the SD card. Used for backing up or transferring profiles to a new device.</p>
+                        <p><strong>Wipe application data:</strong> Will clean the data stored in the app. Very useful
+                            when you have
+                            messed up your code list and had to re-import the correct data.</p>
+                        <p><strong>WARNING:</strong> The exported file contains sensitive information, please keep it in
+                            a safe place.
+                            Anyone who gets the file can get access to your account by using profiles stored in the
+                            file!</p>
+                    </div>
+                </div>
+                <h3 class="text-center">Migrating from an older version (Before v1.1.1)</h3>
+                <div>When you are using an older version, you can type magic sequences *#397678# in application main
+                    interface to export existing data. Make sure <code>kaiauth.json</code> appears in the SD card, and
+                    then install the new version. If the new version is not displayed correctly, open the options menu
+                    and select <strong>Import from SD card</strong>.</div>
             </div>
         </div>
 
     </div>
     <footer class="footer mt-auto py-3">
-        <div class="container">
-          <span class="text-muted">Copyright &copy; 2020 <a href="https://www.zjyl1994.com">zjyl1994</a>. All rights reserved.</span>
+        <div class="container d-flex justify-content-between">
+            <span class="text-muted">Made with <i style="color: #e25555;">&hearts;</i> in Kwangtung.</span>
+            <span class="text-muted">Copyright &copy; 2020 <a href="https://www.zjyl1994.com">zjyl1994</a>. All rights
+                reserved.</span>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -164,10 +164,10 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109257164-3"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-109257164-3');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-109257164-3');
     </script>
 </body>
 
